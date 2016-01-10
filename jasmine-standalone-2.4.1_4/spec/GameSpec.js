@@ -25,6 +25,10 @@ describe("Game", function(){
      game.bowl();
      expect(game.printScore()).toEqual(10)
    })
+  //  it("returns with a strike message when 10 pins are hit", function(){
+  //    spyOn(Math, "random").and.returnValue(0.95)
+  //    expect(function(){game.bowl();}).toEqual("STTRRRIIIKKKKEEE!");
+  //  });
  });
 
 });

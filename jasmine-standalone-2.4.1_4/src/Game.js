@@ -1,8 +1,8 @@
 'use strict';
 
 function Game(){
-  this.points = []
-  this.score = 0
+  // this.frame = new Frame();
+  this.points = [];
 }
 
 Game.prototype.bowl = function(){
@@ -12,9 +12,10 @@ Game.prototype.bowl = function(){
     return "You knocked down " + play + " pins. Go again!";
   }
   else {
-    return "STTRRRIIIKKKKEEE!";
+    console.log("STTRRRIIIKKKKEEE!");
   };
-};
+ };
+
 
 Game.prototype.printScore = function(){
   var count=0;
