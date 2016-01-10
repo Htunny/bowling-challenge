@@ -13,12 +13,18 @@ describe("Game", function(){
    });
  });
 
- describe("Points", function(){
-   it("awards points for the number of pins knocked down", function(){
-     spyOn(game, "pins").and.returnValue(5)
+ describe("Playing the game", function(){
+   it("knocks down pins when played", function(){
+     spyOn(Math, "random").and.returnValue(0.5)
      game.bowl();
      expect(game.points).toEqual([5])
    });
+   it("awards points to the player based on how many pins are knocked down", function(){
+     spyOn(Math, "random").and.returnValue(0.5)
+     game.bowl();
+     game.bowl();
+     expect(game.printScore()).toEqual(10)
+   })
  });
 
 });
